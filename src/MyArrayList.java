@@ -1,6 +1,10 @@
 public class MyArrayList<T> implements MyList<T>{
     private int size;
     private T[] arr;
+    public MyArrayList(){
+        this.arr = (T[]) new Object[5];
+        this.size = 0;
+    }
     @Override
     public int size() {
         return 0;
@@ -9,9 +13,18 @@ public class MyArrayList<T> implements MyList<T>{
     public boolean contains(Object o) {
         return false;
     }
-    @Override
-    public void add(Object item) {
-
+    public void add(T item) {
+        if (size == arr.length){
+            T[] Arr = (T[]) new Object[arr.length * 2];
+            for (int i = 0; i < arr.length; i++){
+                Arr[i] = arr[i];
+            }
+            arr = Arr;
+        }
+        else {
+            arr[size] = item;
+        }
+        size++;
     }
     @Override
     public void add(Object item, int index) {
