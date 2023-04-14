@@ -71,13 +71,12 @@ public class MyArrayList<T> implements MyList<T>{
     }
     @Override
     public int indexOf(Object o) {
-        int index = 0;
         for (int i = 0; i < size; i++){
             if (o == arr[i]){
-                index = i;
+                return i;
             }
         }
-        return index;
+        return -1;
     }
     @Override
     public int lastIndexOf(Object o) {
