@@ -33,7 +33,10 @@ public class MyArrayList<T> implements MyList<T>{
     }
     @Override
     public void add(Object item, int index) {
-
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+        arr[index] = (T) item;
     }
     @Override
     public boolean remove(Object item) {
