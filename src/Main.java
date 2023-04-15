@@ -8,5 +8,6 @@ public class Main {
         list.add(1);
         list.add("Q");
         list.add(false);
+        System.out.println(list.size());
     }
 }
