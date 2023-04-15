@@ -16,5 +16,6 @@ public class Main {
         list.remove(1);
         System.out.println(list.get(1));
         System.out.println(list.remove(false));
+        System.out.println(list.get(0));
     }
 }
