@@ -6,7 +6,7 @@ public class Main {
         list.add("A");
         list.add(true);
         list.add(1);
-        list.add("Q");
+        list.add("A");
         list.add(false);
         System.out.println(list.size());
         System.out.println(list.contains(1));
@@ -17,5 +17,6 @@ public class Main {
         System.out.println(list.get(1));
         System.out.println(list.remove(false));
         System.out.println(list.get(0));
+        System.out.println(list.indexOf("A"));
     }
 }
