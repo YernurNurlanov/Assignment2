@@ -18,5 +18,7 @@ public class Main {
         System.out.println(list.remove(false));
         System.out.println(list.get(0));
         System.out.println(list.indexOf("A"));
+        list.clear();
+        System.out.println(list.size());
     }
 }
