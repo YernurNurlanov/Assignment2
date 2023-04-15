@@ -9,5 +9,7 @@ public class Main {
         list.add("Q");
         list.add(false);
         System.out.println(list.size());
+        System.out.println(list.contains(1));
+        System.out.println(list.contains("a"));
     }
 }
