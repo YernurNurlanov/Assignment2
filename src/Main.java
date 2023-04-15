@@ -12,5 +12,6 @@ public class Main {
         System.out.println(list.contains(1));
         System.out.println(list.contains("a"));
         list.add(100, 4);
+        System.out.println(list.get(4));
     }
 }
