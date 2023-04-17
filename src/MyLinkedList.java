@@ -9,6 +9,7 @@ public class MyLinkedList<E> implements MyList<E>{
             this.previous = previous;
         }
     }
+    private Node head;
     @Override
     public int size() {
         return 0;
