@@ -12,6 +12,11 @@ public class MyLinkedList<E> implements MyList<E>{
     private Node head;
     private Node tail;
     private int size;
+    public MyLinkedList() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
     @Override
     public int size() {
         return 0;
