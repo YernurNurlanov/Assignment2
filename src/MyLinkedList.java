@@ -13,9 +13,9 @@ public class MyLinkedList<E> implements MyList<E>{
     private Node tail;
     private int size;
     public MyLinkedList() {
-        head = null;
-        tail = null;
-        size = 0;
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
     }
     @Override
     public int size() {
@@ -27,7 +27,15 @@ public class MyLinkedList<E> implements MyList<E>{
     }
     @Override
     public void add(E item) {
-
+        Node newNode = new Node(item, null, tail);
+        if (size == 0) {
+            head = newNode;
+        }
+        else {
+            tail.next = newNode;
+        }
+        tail = newNode;
+        size++;
     }
     @Override
     public void add(Object item, int index) {
