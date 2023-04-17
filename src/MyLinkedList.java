@@ -1,4 +1,14 @@
-public class MyLinkedList implements MyList{
+public class MyLinkedList<E> implements MyList<E>{
+    private class Node {
+        private E element;
+        private Node next;
+        private Node previous;
+        public Node(E element, Node next, Node previous) {
+            this.element = element;
+            this.next = next;
+            this.previous = previous;
+        }
+    }
     @Override
     public int size() {
         return 0;
@@ -8,7 +18,7 @@ public class MyLinkedList implements MyList{
         return false;
     }
     @Override
-    public void add(Object item) {
+    public void add(E item) {
 
     }
     @Override
@@ -20,15 +30,15 @@ public class MyLinkedList implements MyList{
         return false;
     }
     @Override
-    public Object remove(int index) {
-        return null;
+    public void remove(int index) {
+
     }
     @Override
     public void clear() {
 
     }
     @Override
-    public Object get(int index) {
+    public E get(int index) {
         return null;
     }
     @Override
