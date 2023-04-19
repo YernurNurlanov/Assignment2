@@ -156,7 +156,16 @@ public class MyLinkedList<E> implements MyList<E>{
     }
     @Override
     public int indexOf(Object o) {
-        return 0;
+        Node current = head;
+        int index = 0;
+        while (current != null) {
+            if (current.element.equals(o)) {
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return -1;
     }
     @Override
     public int lastIndexOf(Object o) {
