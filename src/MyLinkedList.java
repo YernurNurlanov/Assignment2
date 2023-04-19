@@ -169,7 +169,16 @@ public class MyLinkedList<E> implements MyList<E>{
     }
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        Node current = tail;
+        int index = size - 1;
+        while (current != null) {
+            if (current.element.equals(o)) {
+                return index;
+            }
+            current = current.previous;
+            index--;
+        }
+        return -1;
     }
     @Override
     public void sort() {
