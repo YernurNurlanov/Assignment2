@@ -43,6 +43,22 @@ public class MyLinkedList<E> implements MyList<E>{
     public int size() {
         return size;
     }
+    public void print(){
+        Node current = head;
+        while (current != null){
+            System.out.println(current.element);
+            current = current.next;
+        }
+    }
+    public void addAllBiIndex(Object[] list, int index){
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        for (int i = 0; i < list.length; i++){
+            add(list[i], index);
+            index++;
+        }
+    }
     // Checks if the linked list contains a given object
     @Override
     public boolean contains(Object o) {

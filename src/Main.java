@@ -18,9 +18,7 @@ public class Main {
         System.out.println(list.remove(false));
         System.out.println(list.get(0));
         System.out.println(list.indexOf("A"));
-        list.clear();
-        System.out.println(list.size());
-        
+
         MyLinkedList<Object> list2 = new MyLinkedList<>();
         list2.add(5);
         list2.add(12);
@@ -39,7 +37,22 @@ public class Main {
         System.out.println(list2.remove(false));
         System.out.println(list2.indexOf("A"));
         System.out.println(list2.lastIndexOf("A"));
-        list2.clear();
-        System.out.println(list2.size());
+        System.out.println("START DEFENSE ASSIGNMENT 2 ArrayList");
+        Object[] arr = new Object[6];
+        arr[0] = 15;
+        arr[1] = 1;
+        arr[2] = 100;
+        arr[3] = 9;
+        arr[4] = 11;
+        arr[5] = 1111;
+        list.print();
+        list.addAllBiIndex(arr, 3);
+        System.out.println("CHANGED LIST");
+        list.print();
+        System.out.println("START DEFENSE ASSIGNMENT 2 LinkedList");
+        list2.print();
+        list2.addAllBiIndex(arr,3);
+        System.out.println("CHANGED LIST");
+        list2.print();
     }
 }

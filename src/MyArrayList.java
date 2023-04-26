@@ -14,6 +14,33 @@ public class MyArrayList<T> implements MyList<T> {
     @ lastIndexOf() - return index of the element which last matched the incoming element
     @ sort() - sorts array only if it contains only integer
      */
+    public void print(){
+        for (int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
+    }
+    public void addAllBiIndex(Object[] list, int index){
+        if (list.length + arr.length > arr.length) {
+            buffered();
+        }
+        int point = size;
+        for (int i = index; i <= point; i++){
+            arr[i+list.length] = arr[i];
+            size++;
+        }
+        for (int i = 0; i < list.length; i++){
+            arr[index + i] = (T) list[i];
+        }
+    }
+    public void buffered(){
+        T[] Arr = (T[]) new Object[arr.length * 2];
+        // copy elements from old array to new array
+        for (int i = 0; i < arr.length; i++) {
+            Arr[i] = arr[i];
+        }
+        // set the reference to the new array
+        arr = Arr;
+    }
     private int size;
     private T[] arr;
     // Constructor to initialize the array with a capacity of 5 elements
